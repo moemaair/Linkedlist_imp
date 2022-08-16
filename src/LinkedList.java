@@ -1,21 +1,21 @@
 public class LinkedList {
-    Node head;
+    private Node head;
+    private Node tail;
+    private int size;
 
-    public void insert(int data){
-        Node n = new Node();
-        n.data = data;
-
-        if(head == null){
-            head = n;
-        }
-        else {
-            Node n2 = head;
-            while(n2.next !=null){
-
-            }
-        }
+    public LinkedList() {
+        this.size = 0;
     }
 
+    public void insert(int val){
+        Node node = new Node(val);
+        node.next = head;
+        head = node;
 
+        if(tail == null){
+            tail = head;
+        }
+        size+=1;
+    }
 
 }
